@@ -1,3 +1,7 @@
+import os
+from pyrogram import Client, idle
+from pyrogram import Client, idle
+from pytgcalls import idle as pyidle
 from Config import API_HASH, API_ID, BOT_TOKEN, SESSION_NAME
 from pyrogram import Client
 from pytgcalls import PyTgCalls
