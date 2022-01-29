@@ -11,7 +11,7 @@ if os.path.exists(".env"):
 load_dotenv()
 admins = {}
 API_ID = int(getenv("API_ID", "12281520"))
-API_HASH = os.getenv("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e")
+API_HASH = getenv("API_HASH", "60fb92420c4797fb1e1af54a16edaf55")
 SESSION_NAME = os.getenv("SESSION")
 BOT_TOKEN = getenv("BOT_TOKEN", "")
 BOT_NAME = getenv("BOT_NAME", "HELL MUSIC")
