@@ -1,6 +1,6 @@
 import os
 from pyrogram import Client, idle
-
+import asyncio
 from pytgcalls import idle as pyidle
 from Config import API_HASH, API_ID, BOT_TOKEN, SESSION_NAME
 from pyrogram import Client
@@ -11,7 +11,7 @@ bot = Client(
     API_ID,
     API_HASH,
     bot_token=BOT_TOKEN,
-    plugins={"root": "RaiChu.Player"},
+    plugins={"root": "HellMusic"},
 )
 
 user = Client(
