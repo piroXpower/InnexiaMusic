@@ -21,3 +21,10 @@ user = Client(
 )
 
 ProMusic = PyTgCalls(user, overload_quiet_mode=True)
+
+bot.start()
+print("HELL MUSIC STARTED")
+ProMusic.start()
+print("HELL MUSIC CLIENT STARTED")
+pyidle()
+idle()
