@@ -12,7 +12,7 @@ load_dotenv()
 admins = {}
 API_ID = int(getenv("API_ID", "12281520"))
 API_HASH = getenv("API_HASH", "60fb92420c4797fb1e1af54a16edaf55")
-SESSION_NAME = os.getenv("SESSION")
+SESSION_NAME = getenv("SESSION_NAME", "session")
 BOT_TOKEN = getenv("BOT_TOKEN", "")
 BOT_NAME = getenv("BOT_NAME", "HELL MUSIC")
 HNDLR = os.getenv("HNDLR", "!")
