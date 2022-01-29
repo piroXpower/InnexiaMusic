@@ -20,11 +20,11 @@ user = Client(
     api_hash=API_HASH,
 )
 
-proMusic = PyTgCalls(user, overload_quiet_mode=True)
+semx = PyTgCalls(user, overload_quiet_mode=True)
 
 bot.start()
 print("HELL MUSIC STARTED")
-proMusic.start()
+semx.start()
 print("HELL MUSIC CLIENT STARTED")
 pyidle()
 idle()
