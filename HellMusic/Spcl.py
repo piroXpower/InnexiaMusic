@@ -1,5 +1,5 @@
 from HellMusic.queues import QUEUE, get_queue, pop_an_item, clear_queue
-from Config import bot, call_py
+from Config import bot, semx
 from pytgcalls import StreamType
 from pyrogram import Client
 from pyrogram.raw.base import Update
@@ -23,7 +23,7 @@ async def skip_current_song(chat_id):
          type = chat_queue[1][3]
          Q = chat_queue[1][4]
          if type=="Audio":
-            await call_py.change_stream(
+            await semx.change_stream(
                chat_id,
                AudioPiped(
                   url,
@@ -36,7 +36,7 @@ async def skip_current_song(chat_id):
                hm = MediumQualityVideo()
             elif Q==360:
                hm = LowQualityVideo()
-            await call_py.change_stream(
+            await semx.change_stream(
                chat_id,
                AudioVideoPiped(
                   url,
@@ -47,7 +47,7 @@ async def skip_current_song(chat_id):
          pop_an_item(chat_id)
          return [songname, link, type]
        except:
-         await call_py.leave_group_call(chat_id)
+         await semx.leave_group_call(chat_id)
          clear_queue(chat_id)
          return 2
    else:
