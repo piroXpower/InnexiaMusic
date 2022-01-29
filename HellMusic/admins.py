@@ -2,7 +2,7 @@ from pyrogram import Client
 from pyrogram import filters
 from pyrogram.types import Message
 from Config import bot, semx, HNDLR, contact_filter
-from HellMusic.baap import skip_current_song, skip_item
+from HellMusic.Spcl import skip_current_song, skip_item
 from HellMusic.queues import QUEUE, clear_queue
 
 @Client.on_message(contact_filter & filters.command(['skip', '/skip'], prefixes=f"{HNDLR}"))
@@ -40,7 +40,7 @@ async def stop(client, m: Message):
    chat_id = m.chat.id
    if chat_id in QUEUE:
       try:
-         await call_py.leave_group_call(chat_id)
+         await semx.leave_group_call(chat_id)
          clear_queue(chat_id)
          await m.reply("**Stopped Streaming ⏹️**")
       except Exception as e:
@@ -53,7 +53,7 @@ async def pause(client, m: Message):
    chat_id = m.chat.id
    if chat_id in QUEUE:
       try:
-         await call_py.pause_stream(chat_id)
+         await semx.pause_stream(chat_id)
          await m.reply("**Paused Streaming ⏸️**")
       except Exception as e:
          await m.reply(f"**ERROR** \n`{e}`")
@@ -65,7 +65,7 @@ async def resume(client, m: Message):
    chat_id = m.chat.id
    if chat_id in QUEUE:
       try:
-         await call_py.resume_stream(chat_id)
+         await semx.resume_stream(chat_id)
          await m.reply("**Resumed Streaming ▶**")
       except Exception as e:
          await m.reply(f"**ERROR** \n`{e}`")
