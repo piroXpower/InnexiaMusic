@@ -10,7 +10,7 @@ if os.path.exists(".env"):
     
 load_dotenv()
 admins = {}
-API_ID = int(os.getenv("API_ID", "6"))
+API_ID = int(getenv("API_ID", "12281520"))
 API_HASH = os.getenv("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e")
 SESSION_NAME = os.getenv("SESSION")
 BOT_TOKEN = getenv("BOT_TOKEN", "")
@@ -43,6 +43,6 @@ else:
     grp = False
 
 GRPPLAY = grp
-bot = Client(SESSION_NAME, API_ID, API_HASH, plugins=dict(root="HellMusic"))
+bot = Client(BOT_TOKEN, API_ID, API_HASH, plugins=dict(root="HellMusic"))
 semx = PyTgCalls(bot)
 
