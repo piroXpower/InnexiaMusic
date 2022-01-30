@@ -3,7 +3,8 @@ import re
 import asyncio
 from pyrogram import Client
 from HellMusic.queues import QUEUE, add_to_queue
-from Config import bot, call_py, HNDLR, contact_filter, GRPPLAY
+from main import bot, semx
+from Config import HNDLR, contact_filter, GRPPLAY
 from pyrogram import filters
 from pyrogram.types import Message
 from pytgcalls import StreamType
@@ -100,7 +101,7 @@ async def play(client, m: Message):
                      await huehue.edit(f"Queued at **#{pos}**")
                   else:
                      try:
-                        await call_py.join_group_call(
+                        await semx.join_group_call(
                            chat_id,
                            AudioPiped(
                               ytlink,
@@ -133,7 +134,7 @@ async def play(client, m: Message):
                      await huehue.edit(f"Queued at **#{pos}**")
                   else:
                      try:
-                        await call_py.join_group_call(
+                        await semx.join_group_call(
                            chat_id,
                            AudioPiped(
                               ytlink,
