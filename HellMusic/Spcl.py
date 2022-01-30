@@ -1,5 +1,5 @@
 from HellMusic.queues import QUEUE, get_queue, pop_an_item, clear_queue
-from Config import bot, semx
+from main import bot, semx
 from pytgcalls import StreamType
 from pyrogram import Client
 from pyrogram.raw.base import Update
