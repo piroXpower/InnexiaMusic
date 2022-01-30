@@ -68,7 +68,7 @@ async def skip_item(chat_id, h):
       return 0
       
 
-@call_py.on_stream_end()
+@semx.on_stream_end()
 async def on_end_handler(client, update: Update):
    if isinstance(update, StreamAudioEnded):
       chat_id = update.chat_id
