@@ -1,7 +1,7 @@
 from pyrogram import Client
 from pyrogram import filters
 from pyrogram.types import Message
-from Config import bot, semx, HNDLR, contact_filter
+from Config import HNDLR, contact_filter
 from HellMusic.Spcl import skip_current_song, skip_item
 from HellMusic.queues import QUEUE, clear_queue
 
