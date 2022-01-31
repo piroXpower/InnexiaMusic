@@ -13,7 +13,7 @@ The easy way to host this bot, deploy to Heroku, Change the app country to Europ
 
 ### Special Credits 💖
 - [Sammy](https://github.com/FriDayXD): Dev
-- [Abhi](https://GitHub.com/eVEXERA) : Dev
+- [Abhi](https://GitHub.com/JorDenXD) : Dev
 - [Blaze](https://github.com/PiroXPower): Dev
 - [Aman](https://github.com/AMANTYA1): Dev
 - [Levina](https://github.com/levina-lab):For Base
