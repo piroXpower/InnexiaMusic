@@ -3,8 +3,7 @@ import asyncio
 
 from Config import ASSISTANT_NAME, BOT_USERNAME, IMG_1, IMG_2, IMG_6
 from HellMusic.inline import stream_markup
-from Process.design.thumbnail import thumb
-from Process.design.chatname import CHAT_TITLE
+from Process.fonts import CHAT_TITLE
 from Process.filters import command, other_filters
 from Process.queues import QUEUE, add_to_queue
 from ImageFont.main import call_py, user
@@ -209,8 +208,8 @@ async def vplay(c: Client, m: Message):
                     gcname = m.chat.title
                     ctitle = await CHAT_TITLE(gcname)
                     image = await thumb(thumbnail, title, userid, ctitle)
-                    veez, ytlink = await ytdl(url)
-                    if veez == 0:
+                    abhi, ytlink = await ytdl(url)
+                    if abhi == 0:
                         await loser.edit(f"❌ yt-dl issues detected\n\n» `{ytlink}`")
                     else:
                         if chat_id in QUEUE:
@@ -286,8 +285,8 @@ async def vplay(c: Client, m: Message):
                 gcname = m.chat.title
                 ctitle = await CHAT_TITLE(gcname)
                 image = await thumb(thumbnail, title, userid, ctitle)
-                veez, ytlink = await ytdl(url)
-                if veez == 0:
+                abhi, ytlink = await ytdl(url)
+                if abhi == 0:
                     await loser.edit(f"❌ yt-dl issues detected\n\n» `{ytlink}`")
                 else:
                     if chat_id in QUEUE:
@@ -409,12 +408,12 @@ async def vstream(c: Client, m: Message):
         regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
         match = re.match(regex, link)
         if match:
-            veez, livelink = await ytdl(link)
+            abhi, livelink = await ytdl(link)
         else:
             livelink = link
-            veez = 1
+            abhi = 1
 
-        if veez == 0:
+        if abhi == 0:
             await loser.edit(f"❌ yt-dl issues detected\n\n» `{livelink}`")
         else:
             if chat_id in QUEUE:
