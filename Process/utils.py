@@ -16,6 +16,7 @@ from pyrogram.types import (
     InlineKeyboardMarkup,
     Message,
 )
+
 from pyrogram import Client, filters
 from pytgcalls.types.stream import StreamAudioEnded, StreamVideoEnded
 
@@ -117,7 +118,7 @@ async def stream_end_handler(_, u: Update):
         else:
          await bot.send_message(chat_id, f"💡 **Streaming next track**\n\n🏷 **Name:** [{op[0]}]({op[1]}) | `{op[2]}`\n💭 **Chat:** `{chat_id}`", disable_web_page_preview=True, reply_markup=keyboard)
     else:
-       pass
+        pass
 
 
 async def bash(cmd):
