@@ -1,30 +1,15 @@
-import os
-from pyrogram import Client, idle
 import asyncio
-from pytgcalls import idle as pyidle
-from Config import API_HASH, API_ID, BOT_TOKEN, SESSION_NAME
-from pyrogram import Client
-from pytgcalls import PyTgCalls
+from pytgcalls import idle
+from Process.main import call_py, bot
 
-bot = Client(
-    ":memory:",
-    API_ID,
-    API_HASH,
-    bot_token=BOT_TOKEN,
-    plugins={"root": "HellMusic"},
-)
+async def start_bot():
+    print("[INFO]: STARTING BOT CLIENT")
+    await bot.start()
+    print("[INFO]: STARTING PYTGCALLS CLIENT")
+    await call_py.start()
+    await idle()
+    print("[INFO]: STOPPING BOT & USERBOT")
+    await bot.stop()
 
-user = Client(
-    SESSION_NAME,
-    api_id=API_ID,
-    api_hash=API_HASH,
-)
-
-semx = PyTgCalls(user, overload_quiet_mode=True)
-
-bot.start()
-print("HELL MUSIC STARTED")
-semx.start()
-print("HELL MUSIC CLIENT STARTED")
-pyidle()
-idle()
+loop = asyncio.get_event_loop()
+loop.run_until_complete(start_bot())
