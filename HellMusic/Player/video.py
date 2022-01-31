@@ -19,7 +19,6 @@ from pytgcalls.types.input_stream.quality import (
     MediumQualityVideo,
 )
 from youtubesearchpython import VideosSearch
-IMAGE_THUMBNAIL = "https://telegra.ph/file/519b6bc739756cb822039.png"
 
 
 def ytsearch(query: str):
