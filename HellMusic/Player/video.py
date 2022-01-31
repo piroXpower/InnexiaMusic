@@ -2,12 +2,12 @@ import re
 import asyncio
 
 from Config import ASSISTANT_NAME, BOT_USERNAME, IMG_1, IMG_2, IMG_6
-from RaiChu.inline import stream_markup
+from HellMusic.inline import stream_markup
 from Process.design.thumbnail import thumb
 from Process.design.chatname import CHAT_TITLE
 from Process.filters import command, other_filters
 from Process.queues import QUEUE, add_to_queue
-from Process.main import call_py, user
+from ImageFont.main import call_py, user
 from pyrogram import Client
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
