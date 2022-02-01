@@ -2,7 +2,7 @@ import os
 from os import path
 from typing import Callable
 from asyncio.queues import QueueEmpty
-
+from HellMusic.ProMusic.queues import QUEUE, add_to_queue
 import aiofiles
 import aiohttp
 import ffmpeg
@@ -520,8 +520,8 @@ async def ytplay(_, message: Message):
     file_path = await converter.convert(youtube.download(url))
     for x in callsmusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
-    if int(chat_id) in ACTV_CALLS:
-        position = await queues.put(chat_id, file=file_path)
+    if chat_id in QUEUE:
+        position = add_to_queue(chat_id, file=file_path)
         qeue = que.get(chat_id)
         s_name = title
         r_by = message.from_user
