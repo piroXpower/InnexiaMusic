@@ -6,6 +6,7 @@ import aiofiles
 from Config import ASSISTANT_NAME, BOT_USERNAME, IMG_1, IMG_2, IMG_6
 from HellMusic.inline import stream_markup
 from Process.fonts import CHAT_TITLE
+from PIL import Image, ImageDraw, ImageFont
 from Process.filters import command, other_filters
 from Process.queues import QUEUE, add_to_queue
 from ImageFont.main import call_py, user
