@@ -1,4 +1,6 @@
 # Innexia Music 🎶
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 
 <p align="center"><a href="https://t.me/InnexiaBot"><img src="https://github.com/FriDayXD/ProMusic/raw/HellMusic/ImageFont/hell.png"></a></p>
 
