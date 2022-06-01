@@ -11,19 +11,16 @@ Bot = Client(
     api_hash=API_HASH
 )
 
-
-abhi = Client(
-    api_id=API_ID, 
-    api_hash=API_HASH, 
-    session_name=SESSION_NAME
-    
-    )
-
-calls = PyTgCalls(abhi,
+sex = Client(
+      API_ID, 
+      API_HASH, 
+      SESSION_NAME
+) 
+user = PyTgCalls(sex,
     cache_duration=100,
     overload_quiet_mode=True,)
 
-call_py = PyTgCalls(abhi, cache_duration=100, overload_quiet_mode=True)
+call_py = PyTgCalls(sex, overload_quiet_mode=True)
 
 with Client("Pyrogram Bot", API_ID, API_HASH, bot_token=BOT_TOKEN) as app:
     me_bot = app.get_me()
