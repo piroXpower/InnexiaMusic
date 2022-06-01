@@ -1,7 +1,7 @@
 import random
 from pyrogram.types import InlineKeyboardButton
 
-def stream_markup(_, videoid, chat_id):
+def stream_markup(_, chat_id):
     buttons = [
         [           
             InlineKeyboardButton(
