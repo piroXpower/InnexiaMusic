@@ -24,5 +24,5 @@ call_py = PyTgCalls(sex, overload_quiet_mode=True)
 
 with Client("Bot", API_ID, API_HASH, bot_token=BOT_TOKEN) as app:
     me_bot = app.get_me()
-with abhi as app:
-    me_abhi = app.get_me()
+with sex as app:
+    me_sex = app.get_me()
