@@ -5,13 +5,13 @@ def stream_markup(_, chat_id):
     buttons = [
         [           
             InlineKeyboardButton(
-                text= "Menu",
+                text="Menu",
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text= "Close",
+                text="Close",
                 callback_data="close"
             )
         ],
