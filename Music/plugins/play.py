@@ -12,9 +12,9 @@ import aiohttp
 from Music.helper.converter import convert
 import ffmpeg
 import requests
-from Music.chatdesign import CHAT_TITLE
+from Music.Design.chatdesign import CHAT_TITLE
 from PIL import Image, ImageDraw, ImageFont
-from Music.config import ASSISTANT_NAME, BOT_USERNAME, IMG_1, IMG_2, IMG_5
+from config import ASSISTANT_NAME, BOT_USERNAME, IMG_1, IMG_2, IMG_5, SUPPORT_CHAT
 from Music.helper.filters import command, other_filters
 from Music.Client.queues import QUEUE, add_to_queue
 from Music.Client.tgcalls import call_py 
