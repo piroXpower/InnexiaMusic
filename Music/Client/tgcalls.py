@@ -17,12 +17,4 @@ sex = Client(
     
     )
 
-call_py = PyTgCalls(sex,
-    cache_duration=100,
-    overload_quiet_mode=True,)
-
-
-with Client("Music", API_ID, API_HASH, bot_token=BOT_TOKEN) as app:
-    Music = app.get_me()
-with sex as app:
-    me_sex = app.get_me()
+Mikki = sex()
