@@ -1,59 +1,76 @@
 {
-    "name": "ProMusic",
-    "logo": "https://telegra.ph/file/95c333a0e464b4ee1228f.jpg",
-    "description": "Pro Music allow you to stream music trought the telegram voice chat feature.",
-    "keywords": [
-        "music", 
-        "voice chat", 
-        "telegram"
-    ],
-    "repository": "https://github.com/FriDayXD/ProMusic",
-    "stack": "container",
-    "env": {
-        "SESSION_NAME": {
-            "description": "fill with the pyrogram session string",
-            "required": true
-        },
-        "BOT_TOKEN": {
-            "description": "fill with your bot token from @BotFather",
-            "required": true
-        },
-        
-        "API_ID": {
-            "description": "your Api ID from my.telegram.org/apps",
-            "required": true
-        },
-        "API_HASH": {
-            "description": "your Api Hash from my.telegram.org/apps",
-            "required": true
-        },
-        "SUDO_USERS": {
-            "description": "fill with the user id who can access all function in your bot (separate with space).",
-            "required": true
-        }, 
-        "LOG_CHAT": {
-           "description": "create one group and add your assistant id and bot as admin in that group then extract group id and put here", 
-           "required": true
-        }
-        
+  "name": "HerokuBannedDeployer",
+  "description": "With this you can deploy repos that are banned/blacklisted by heroku",
+  "keywords": [
+    "telegram",
+    "open",
+    "source",
+    "multi",
+    "purpose",
+    "remote",
+    "deployer"
+  ],
+  "env": {
+    "OTHER_INSTALLS": {
+      "description": "If you need install packages for running your app(Python is pre-installed).[Space in between each package]",
+      "value": "None",
+      "required": false
     },
-    "addons": [],
-    "buildpacks": [
-        {
-            "url": "heroku/python"
-        },
-        {
-            "url": "heroku/nodejs"
-        },
-        {
-            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-        }
-    ],
-    "formation": {
-        "worker": {
-            "quantity": 1,
-            "size": "free"
-        }
+    "REPO_URL": {
+      "description": "URL of the REPO that you want to deploy.",
+      "value": ""
+    },
+    "PYTHON_FILE": {
+      "description": "Name of the python file that you need to run. [use -m if you need to run __main__.py from a folder]",
+      "value": ""
+    },
+     "OTHER_CMD": {
+      "description": "If you need to run any bash command other than python specify here",
+      "value": "None",
+      "required": false
+    }, 
+     "SESSION_NAME": {
+       "description": "fill with the pyrogram session string",
+       "required": true
+   },
+    "BOT_TOKEN": {
+      "description": "fill with your bot token from @BotFather",
+      "required": true
+   },
+    "API_ID": {
+      "description": "your Api ID from my.telegram.org/apps",
+      "required": true
+   },
+    "API_HASH": {
+      "description": "your Api Hash from my.telegram.org/apps",
+      "required": true
+   },
+    "SUDO_USERS": {
+      "description": "fill with the user id who can access all function in your bot (separate with space).",
+      "required": true
+   }, 
+    "LOG_CHAT": {
+      "description": "create one group and add your assistant id and bot as admin in that group then extract group id and put here", 
+      "required": true
+   }
+  
+  },
+  "addons": [
+      {
+          "plan": "heroku-postgresql"
+      }],
+  "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
     }
+  }
 }
-
