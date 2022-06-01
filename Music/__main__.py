@@ -1,7 +1,7 @@
 import asyncio
 from pytgcalls import idle
 from Music import LOG_CHAT
-from Music.Client.tgcalls import call_py, calls, Bot, sex as abhi
+from Music.Client.tgcalls import call_py, Bot, sex as abhi
 
 async def start_bot():
     print("[INFO]: STARTING BOT CLIENT")
