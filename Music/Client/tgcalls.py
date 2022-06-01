@@ -6,5 +6,5 @@ call_py = PyTgCalls(abhi, overload_quiet_mode=True)
 
 with Client("Pyrogram Bot", API_ID, API_HASH, bot_token=BOT_TOKEN) as app:
     me_bot = app.get_me()
-with abbi as app:
+with abhi as app:
     me_abhi = app.get_me()
