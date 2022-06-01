@@ -21,5 +21,4 @@ future
 wget
 lyricsgenius
 yt-dlp==2021.11.10.1
-skem
 git+https://github.com/mrabhix/pyrogram-bot.git
