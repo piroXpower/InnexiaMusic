@@ -3,6 +3,8 @@ from pytgcalls import idle
 from Music import LOG_CHAT
 from Music.Client.tgcalls import call_py, Bot, sex as abhi
 
+loop = asyncio.get_event_loop()
+
 async def start_bot():
     print("[INFO]: STARTING BOT CLIENT")
     await Bot.start()
@@ -24,5 +26,4 @@ async def start_bot():
     print("[INFO]: STOPPING BOT & USERBOT")    
     await Bot.stop()
 
-loop = asyncio.get_event_loop()
 loop.run_until_complete(start_bot())
