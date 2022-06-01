@@ -1,7 +1,7 @@
 import asyncio
 from pytgcalls import idle
 from Music import LOG_CHAT
-from Client.tgcalls import call_py
+from Music.Client.tgcalls import call_py
 from pyrogram_bot.abhi import Bot, abhi
 
 async def start_bot():
