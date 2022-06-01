@@ -14,13 +14,14 @@ async def start_bot():
     print("[INFO]: STARTING PYTGCALLS CLIENT")
 
     await calls.start()
+    await idle()
     await abhi.send_message(
                             LOGGER,
                             "<b>Innexia Music Assistant Successfully Started!</b>"
     ), 
     await abhi.join_chat("RexomaSupport"), 
     await abhi.join_chat("RexomaUpdate") 
-    await idle()
+
 
     print("[INFO]: STOPPING BOT & USERBOT")
 
