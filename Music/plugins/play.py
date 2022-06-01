@@ -26,7 +26,7 @@ from pytgcalls import StreamType
 from pytgcalls.types.input_stream import AudioPiped
 from youtubesearchpython import VideosSearch
 from Music.design.thumbnail import play_thumb, queue_thumb
-from Music.plugins import playboard
+from Music.plugins.keyboard import playboard
 
 
 def ytsearch(query):
