@@ -19,7 +19,7 @@ from Music.helper.filters import command, other_filters
 from Music.Client.queues import QUEUE, add_to_queue
 from Music.Client.tgcalls import call_py, sex as user
 from Music.helper.utils import bash
-from Music import bot as Client
+from Music import Bot as Client
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from pytgcalls import StreamType
