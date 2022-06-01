@@ -14,7 +14,7 @@ async def start_bot():
     print("[INFO]: STARTING PYTGCALLS CLIENT")
 
     await call_py.start()
-    
+    await idle()
     await abhi.send_message(
                             LOGGER,
                             "<b>Innexia Music Assistant Successfully Started!</b>"
@@ -24,4 +24,4 @@ async def start_bot():
     print("[INFO]: STOPPING BOT & USERBOT")    
     await Bot.stop()
 
-await idle()
+
