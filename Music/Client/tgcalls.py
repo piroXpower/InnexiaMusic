@@ -7,7 +7,7 @@ Bot = Client(
     API_ID,
     API_HASH,
     bot_token=BOT_TOKEN,
-    plugins=dict(root="Script.Plugin"),
+    plugins=dict(root="Music.plugins"),
     )
 
 sex = Client(
