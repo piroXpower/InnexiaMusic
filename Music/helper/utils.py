@@ -1,6 +1,6 @@
 import os
 import asyncio
-from Music.Client.tgcalls import Bot, call_py
+from Music.Client.tgcalls import Bot, Mikki as call_py
 from pytgcalls.types import Update
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 from Music.Client.queues import QUEUE, clear_queue, get_queue, pop_an_item
