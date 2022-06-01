@@ -12,7 +12,7 @@ import aiohttp
 from Music.helper.converter import convert
 import ffmpeg
 import requests
-from Music.fonts import CHAT_TITLE
+from Music.chatdesign import CHAT_TITLE
 from PIL import Image, ImageDraw, ImageFont
 from Music.config import ASSISTANT_NAME, BOT_USERNAME, IMG_1, IMG_2, IMG_5
 from Music.helper.filters import command, other_filters
