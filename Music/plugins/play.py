@@ -17,8 +17,7 @@ from PIL import Image, ImageDraw, ImageFont
 from config import ASSISTANT_NAME, BOT_USERNAME, IMG_1, IMG_2, IMG_5, SUPPORT_CHAT
 from Music.helper.filters import command, other_filters
 from Music.Client.queues import QUEUE, add_to_queue
-from Music.Client.tgcalls import call_py 
-from Pyrogram Bot.abhi import abhi as user
+from Music.Client.tgcalls import call_py, abhi as user
 from Music.helper.utils import bash
 from Music import bot as Client
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
