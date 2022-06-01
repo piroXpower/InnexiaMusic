@@ -2,7 +2,7 @@ from pyrogram import Client
 from Music import API_ID, API_HASH, BOT_TOKEN, SESSION_NAME
 from pytgcalls import PyTgCalls, idle
 
-bot = Client(
+Bot = Client(
     "Music",
     API_ID,
     API_HASH,
@@ -23,6 +23,6 @@ call_py = PyTgCalls(sex,
 
 
 with Client("Music", API_ID, API_HASH, bot_token=BOT_TOKEN) as app:
-    indian = app.get_me()
+    Music = app.get_me()
 with sex as app:
     me_sex = app.get_me()
