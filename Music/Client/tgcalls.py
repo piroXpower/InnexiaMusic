@@ -17,4 +17,4 @@ sex = Client(
     
     )
 
-Mikki = sex()
+Mikki = PyTgCalls(sex)
