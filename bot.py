@@ -1,7 +1,7 @@
 import asyncio
 from pytgcalls import idle
 from Music import LOG_CHAT
-from Music.Client.tgcalls import call_py, Bot, sex as abhi
+from Music.Client.tgcalls import Mikki, Bot, sex as abhi
 
 loop = asyncio.get_event_loop()
 
