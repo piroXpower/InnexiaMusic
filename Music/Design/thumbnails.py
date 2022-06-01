@@ -7,7 +7,7 @@ import aiohttp
 from PIL import (Image, ImageDraw, ImageEnhance, ImageFilter,
                  ImageFont, ImageOps)
 from youtubesearchpython.__future__ import VideosSearch
-from Music import BOT_NAME, YOUTUBE_IMG_URL
+from Music import BOT_NAME, YOUTUBE_URL as YOUTUBE_IMG_URL
 
 def changeImageSize(maxWidth, maxHeight, image):
     widthRatio = maxWidth / image.size[0]
