@@ -15,10 +15,10 @@ import requests
 from Music.fonts import CHAT_TITLE
 from PIL import Image, ImageDraw, ImageFont
 from Music.config import ASSISTANT_NAME, BOT_USERNAME, IMG_1, IMG_2, IMG_5
-from Music.filters import command, other_filters
-from Music.queues import QUEUE, add_to_queue
+from Music.helper.filters import command, other_filters
+from Music.Client.queues import QUEUE, add_to_queue
 from Music import call_py, sammy as user
-from Music.utils import bash
+from Music.helper.utils import bash
 from Music import bot as Client
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
