@@ -21,15 +21,7 @@ async def start_bot():
     ), 
     await abhi.join_chat("RexomaSupport"), 
     await abhi.join_chat("RexomaUpdate") 
-
-
-    print("[INFO]: STOPPING BOT & USERBOT")
-
-    await Bot.send_message(
-                           LOGGER,
-                           "<b>Error Occurred Bot And Assistant Being Stopped</b>"
-    ), 
-
+    print("[INFO]: STOPPING BOT & USERBOT")    
     await Bot.stop()
 
 
