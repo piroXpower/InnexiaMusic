@@ -13,5 +13,5 @@ RUN \
   rm -rf /var/lib/apt/lists/*
 RUN python3.9 -m pip install py-tgcalls
 RUN apt update && apt install -y ffmpeg   
-RUN pip3 install --no-cache-dir --upgrade --requirement requirements.txt
+RUN pip3 install -r requirements.txt
 CMD bash start
