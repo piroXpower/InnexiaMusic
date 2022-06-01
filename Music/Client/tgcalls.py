@@ -17,7 +17,7 @@ sex = Client(
     
     )
 
-user = PyTgCalls(sex,
+call_py = PyTgCalls(sex,
     cache_duration=100,
     overload_quiet_mode=True,)
 
