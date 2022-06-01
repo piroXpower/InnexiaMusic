@@ -17,3 +17,5 @@ def play_markup(_, chat_id):
         ],
     ]
     return buttons
+
+playboard = play_markup
