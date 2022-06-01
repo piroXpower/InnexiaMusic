@@ -3,7 +3,7 @@ import asyncio
 from Music.Client.tgcalls import Bot, call_py
 from pytgcalls.types import Update
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
-from Process.queues import QUEUE, clear_queue, get_queue, pop_an_item
+from Music.Client.queues import QUEUE, clear_queue, get_queue, pop_an_item
 from pytgcalls.types.input_stream.quality import (
     HighQualityAudio,
     HighQualityVideo,
