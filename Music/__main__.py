@@ -1,7 +1,7 @@
 import asyncio
 from pytgcalls import idle
 from Music import LOG_CHAT
-from Music.Client.tgcalls import call_py, Bot, abhi
+from Music.Client.tgcalls import calls, Bot, abhi
 
 async def start_bot():
     print("[INFO]: STARTING BOT CLIENT")
@@ -13,7 +13,7 @@ async def start_bot():
 
     print("[INFO]: STARTING PYTGCALLS CLIENT")
 
-    await calls_py.start()
+    await calls.start()
     await abhi.send_message(
                             LOGGER,
                             "<b>Innexia Music Assistant Successfully Started!</b>"
