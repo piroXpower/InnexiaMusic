@@ -12,9 +12,9 @@ Bot = Client(
 )
 
 sex = Client(
-      API_ID, 
-      API_HASH, 
-      SESSION_NAME
+      api_id=API_ID, 
+      api_hash=API_HASH, 
+      session_name=SESSION_NAME
 ) 
 user = PyTgCalls(sex,
     cache_duration=100,
