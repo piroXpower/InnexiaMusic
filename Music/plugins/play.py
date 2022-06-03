@@ -25,7 +25,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from pytgcalls import StreamType
 from pytgcalls.types.input_stream import AudioPiped
 from youtubesearchpython import VideosSearch
-from Music.Design.thumbnails import play_thumb, queue_thumb
+from Music.Design.thumbnails import gen_thumb as play_thumb
 from Music.plugins.keyboard.play import playboard
 
 
