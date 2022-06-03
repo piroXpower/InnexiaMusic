@@ -149,7 +149,7 @@ async def play(c: Client, m: Message):
                 )
             else:
              try:
-                await call_py.join_group_call(
+                await Mikki.join_group_call(
                     chat_id,
                     AudioPiped(
                         dl,
